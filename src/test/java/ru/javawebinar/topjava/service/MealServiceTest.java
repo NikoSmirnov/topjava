@@ -55,6 +55,11 @@ public class MealServiceTest {
         }
     };
 
+    @Autowired
+    private MealService service;
+    @Autowired
+    private MealRepository repository;
+
     @AfterClass
     public static void printResult() {
         log.info("\n---------------------------------" +
@@ -63,11 +68,6 @@ public class MealServiceTest {
                 results +
                 "\n---------------------------------");
     }
-
-    @Autowired
-    private MealService service;
-    @Autowired
-    private MealRepository repository;
 
     @Test
     public void delete() throws Exception {
